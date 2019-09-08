@@ -1,13 +1,11 @@
 var mysql = require ('mysql');
-var inquirer = require('inquirer');
-
-var colors = require('colors');
+var inquirer = require("inquirer");
 
 var connection = mysql.createConnection9{
     host: 'localhost',
     port: '3306',
     user: 'root',
-    password: 'Dakota2!',
+    password: 'Dakota2!,
     database; bamazon_db,
 };
 
@@ -18,7 +16,7 @@ connection.connect(function(err) {
 
 });
 
-funtion afterConnection() {
+function afterConnection() {
 connection.query("SELECT * FROM products"), function(err, res) {
     if (err) throw err;
     console.log(res);
